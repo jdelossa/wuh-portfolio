@@ -1,30 +1,56 @@
 @white: #ffffff;
 @gray: #cccccc;
 @black: #000000;
-@winthrop-blue: #0000ff;
+@winthrop-darker-blue: #19566E;
+@winthrop-blue: #336C83;
 
 body {
-	background-color: @white;
+	background-color: darken(@white, 1%);
     overflow-x: hidden; 
+    padding-top: 0;
+    -webkit-font-smoothing: antialiased;
+}
+h2, h5 {
+    color: @winthrop-blue;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.navbar-static-top {
+    border-top: solid 10px @winthrop-darker-blue;
+    background-color: @winthrop-blue;
+    padding: 10px 0;
+    h1 {
+        color: @white;
+    }
 }
 .sites {
 	margin: 50px 0;
 }
 .site {
-    height: 315px;
+    height: 280px;
     padding: 0;
     overflow: hidden;
     margin: 30px 15px 15px 15px;
-    width: 100%;
+    width: 358px;
     overflow: hidden; 
-  }
+}
 
 /* IFRAME */
+iframe {
+    display: block !important;
+}
 .frame { 
-	width: 1080px; 
+	width: 1280px; 
 	height: 800px; 
-	border: 1px solid @gray;
+	border: solid 5px @gray;
     pointer-events: none;
+    border-radius: 16px;
 }
 .frame {
     -moz-transform: scale(0.25);
@@ -34,17 +60,29 @@ body {
     -webkit-transform: scale(0.25);
     -webkit-transform-origin: 0 0;
 }
+.center-frame {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    width: inherit;
+    height: inherit;
+}
+.center-frame, .overlay {
+    margin: auto;
+}
 /* overlay */
 .overlay {
     position: absolute;
     left: 0px;
     right: 0px;
-    width: 100%; 
-    height: 93%;
+    width: 381px;
+    height: 237px;
     z-index: 999;
     text-align: center;
+    border-radius: 5px;
     -webkit-transform: scale(0.84);
-    -webkit-transform-origin: 180px 0px;
+    -webkit-transform-origin: 75px 0;
 
     a {
         position: relative;
@@ -54,12 +92,12 @@ body {
         font-size: 22px;
         margin: 10px;
         color: @white;
-        border: solid 1px @white;
+        border: solid 2.5px @white;
         padding: 5px 15px;
     }
 }
 .overlay:hover {
-    background: rgba(0,0,0,0.5);
+    background: rgba(25, 86, 110 ,0.7);
     cursor: pointer;
     a {
         display: inline-block;
@@ -67,27 +105,78 @@ body {
     }
 }
 /* MODAL */
-.modal-header, .modal-footer {
+.modal-footer {
     border: none;
+    #border {
+        margin-top: 45px;
+        border-top: solid 1px @gray;
+    }
+    .btn-primary {
+        margin-top: 25px;
+    }
 }
 .modal-site {
     height: 350px;
+    .modal-frame {
+        &:extend(.frame);
+        pointer-events: all;
+        border: solid 5px @gray;
+        height: 1500px;
+    }
+    .resize-desktop {
+        width: 1360px;
+    }
+    .resize-tablet {
+        width: 800px;
+    }
+    .resize-mobile {
+        width: 480px;
+    }
 }
-.devices {
-    padding-bottom: 40px;
-    .mobile, .tablet, .desktop {
-        float: left;
-        text-align: center;
-        width: 33%;
+.info {
+    text-align: center;
+    .btn-site {
+        margin-top: 20px;
+        a {
+            color: @white;
+            text-decoration: none;
+        }
+    }
+    .description {
+        text-align: left;
+    }
+    .devices {
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        span {
+            margin-top: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            position: relative;
+            left: 5px;
+        }
+        .btn-device {
+            width: 33%;
+            a {
+                padding: 20px 10px;
+            }
+            .fa {
+                font-size: 30px;
+
+                &:hover {
+                    color: @gray;
+                    cursor: pointer;
+                }
+            }
+        }
+
     }
 }
 /* FROM LARGEST TO SMALLEST SCREEN SIZE */
-@media(min-width: 1370px){
-    .frame {
-        width: 1120px;
-    }
-}
-@media(min-width: 1140px){
+
+@media(min-width: 1280px){
     .frame {
         width: 1020px;
     }
@@ -99,6 +188,18 @@ body {
         -webkit-transform: scale(0.35);
         -webkit-transform-origin: 0 0;
     }
+    .overlay {
+        width: 426px;
+        height: 333px;
+        -webkit-transform-origin: 210px 0px;
+    } 
+    .info {
+        margin-left: 30px;
+    } 
+    .modal-site {
+        height: 500px;
+    }
+
 }
 @media(max-width: 1080px){
     .frame {
