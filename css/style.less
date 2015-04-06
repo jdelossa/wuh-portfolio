@@ -40,7 +40,6 @@ h5 {
     width: 358px;
     overflow: hidden; 
 }
-
 /* IFRAME */
 iframe {
     display: block !important;
@@ -104,6 +103,16 @@ iframe {
         text-decoration: none;
     }
 }
+/* loader */
+.loader {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 120px;
+    z-index: 999;
+    margin: auto;
+    background: @white;
+}
 /* MODAL */
 .modal-header {
     color: @white;
@@ -122,7 +131,6 @@ iframe {
 .modal-site {
     height: 350px;
     .modal-frame {
-        &:extend(.frame);
         pointer-events: all;
         border: solid 5px @gray;
         height: 1500px;
@@ -180,12 +188,12 @@ iframe {
     }
 }
 /* FROM LARGEST TO SMALLEST SCREEN SIZE */
-@media(max-width: 1281) and (min-width: 1200px){
+@media(max-width: 1280) and (min-width: 1200px){
     .center-frame, .overlay {
         position: relative;
     }
 }
-@media(min-width: 1279px){
+@media(min-width: 1280px){
     .frame {
         width: 1020px;
     }

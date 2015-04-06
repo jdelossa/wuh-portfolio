@@ -37,16 +37,14 @@ h5 {
 iframe {
   display: block !important;
 }
-.frame,
-.modal-site .modal-frame {
+.frame {
   width: 1280px;
   height: 800px;
   border: solid 5px #cccccc;
   pointer-events: none;
   border-radius: 16px;
 }
-.frame,
-.modal-site .modal-frame {
+.frame {
   -moz-transform: scale(0.25);
   -moz-transform-origin: 0 0;
   -o-transform: scale(0.25);
@@ -97,6 +95,16 @@ iframe {
 .overlay:hover a {
   display: inline-block;
   text-decoration: none;
+}
+/* loader */
+.loader {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 120px;
+  z-index: 999;
+  margin: auto;
+  background: #ffffff;
 }
 /* MODAL */
 .modal-header {
@@ -171,19 +179,17 @@ iframe {
   cursor: pointer;
 }
 /* FROM LARGEST TO SMALLEST SCREEN SIZE */
-@media (max-width: 1281) and (min-width: 1200px) {
+@media (max-width: 1280) and (min-width: 1200px) {
   .center-frame,
   .overlay {
     position: relative;
   }
 }
-@media (min-width: 1279px) {
-  .frame,
-  .modal-site .modal-frame {
+@media (min-width: 1280px) {
+  .frame {
     width: 1020px;
   }
-  .frame,
-  .modal-site .modal-frame {
+  .frame {
     -moz-transform: scale(0.35);
     -moz-transform-origin: 0 0;
     -o-transform: scale(0.35);
@@ -204,14 +210,12 @@ iframe {
   }
 }
 @media (max-width: 1080px) {
-  .frame,
-  .modal-site .modal-frame {
+  .frame {
     width: 1180px;
   }
 }
 @media (max-width: 1200px) {
-  .frame,
-  .modal-site .modal-frame {
+  .frame {
     width: 1285px;
   }
 }
