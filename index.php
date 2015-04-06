@@ -24,6 +24,10 @@
 					<div class="col-lg-4 col-md-6 col-sm-6" ng-repeat="site in sites">
 
 						<div class="site">
+							<img class="loader" src="ajax-loader.gif" alt="loading"/>
+							<div class="overlay" ng-click="open(site)">
+								<a href="#">View Website</a>
+							</div>
 							<div class="center-frame">
 								<div class="overlay" ng-click="open(site)">
 									<a href="#">View Website</a>
@@ -46,7 +50,8 @@
 		                    	<div class="row">
 	                    			<div class="col-md-5">
 	                    				<div class="modal-site">
-	                    					<iframe class="modal-frame resize-desktop" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
+	                    					<img class="loader" src="ajax-loader.gif" alt="loading"/>
+	                    					<iframe class="frame modal-frame resize-desktop" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
 	                    				</div>
 	                    			</div>
 	                    			<div class="col-md-7">
