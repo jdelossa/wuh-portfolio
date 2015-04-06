@@ -52,8 +52,8 @@ portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $
       },
        {
           title: 'Peter Kelt Medical Services', 
-          url: 'http://localhost:8888/kelt_wordpress',
-          description: '.. BAH ',
+          url: 'http://wuhwebsites.winthrop.org/kelt_wordpress',
+          description: 'Peter Kelt Medical Services',
       }
     ];
 
