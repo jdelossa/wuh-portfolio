@@ -49,6 +49,11 @@ portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $
           title: 'East End Cardiology', 
           url: 'http://wuhwebsites.winthrop.org/eastend_cardio_wordpress/',
           description: 'East End Cardiology',
+      },
+       {
+          title: 'Peter Kelt Medical Services', 
+          url: 'http://localhost:8888/kelt_wordpress',
+          description: '.. BAH ',
       }
     ];
 

@@ -4,7 +4,6 @@ body {
   padding-top: 0;
   -webkit-font-smoothing: antialiased;
 }
-h2,
 h5 {
   color: #336c83;
 }
@@ -30,7 +29,7 @@ h5 {
 .site {
   height: 280px;
   padding: 0;
-  margin: 30px 15px 15px 15px;
+  margin: 30px auto;
   width: 358px;
   overflow: hidden;
 }
@@ -78,7 +77,7 @@ iframe {
   text-align: center;
   border-radius: 5px;
   -webkit-transform: scale(0.84);
-  -webkit-transform-origin: 185px 0;
+  -webkit-transform-origin: 195px 0;
 }
 .overlay a {
   position: relative;
@@ -100,6 +99,10 @@ iframe {
   text-decoration: none;
 }
 /* MODAL */
+.modal-header {
+  color: #ffffff;
+  background-color: #336c83;
+}
 .modal-footer {
   border: none;
 }
@@ -158,15 +161,22 @@ iframe {
 }
 .info .devices .btn-device a {
   padding: 20px 10px;
+  color: #808080;
 }
 .info .devices .btn-device .fa {
   font-size: 30px;
 }
 .info .devices .btn-device .fa:hover {
-  color: #cccccc;
+  color: #999999;
   cursor: pointer;
 }
 /* FROM LARGEST TO SMALLEST SCREEN SIZE */
+@media (max-width: 1280) and (min-width: 1200px) {
+  .center-frame,
+  .overlay {
+    position: relative;
+  }
+}
 @media (min-width: 1280px) {
   .frame,
   .modal-site .modal-frame {
@@ -197,5 +207,11 @@ iframe {
   .frame,
   .modal-site .modal-frame {
     width: 1180px;
+  }
+}
+@media (max-width: 1200px) {
+  .frame,
+  .modal-site .modal-frame {
+    width: 1285px;
   }
 }
