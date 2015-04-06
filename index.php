@@ -56,7 +56,7 @@
 	                    			<div class="col-md-5">
 	                    				<div class="modal-site">
 	                    					<img class="loader" src="ajax-loader.gif" alt="loading"/>
-	                    					<iframe class="frame modal-frame resize-desktop" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
+	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
 	                    				</div>
 	                    			</div>
 	                    			<div class="col-md-7">
