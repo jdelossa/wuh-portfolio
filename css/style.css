@@ -171,13 +171,13 @@ iframe {
   cursor: pointer;
 }
 /* FROM LARGEST TO SMALLEST SCREEN SIZE */
-@media (max-width: 1280) and (min-width: 1200px) {
+@media (max-width: 1281) and (min-width: 1200px) {
   .center-frame,
   .overlay {
     position: relative;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1279px) {
   .frame,
   .modal-site .modal-frame {
     width: 1020px;
