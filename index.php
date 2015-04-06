@@ -25,7 +25,7 @@
 			<div class="sites">
 				<div class="row">
 					<!-- repeat for each site -->
-					<div class="col-md-4" ng-repeat="site in sites">
+					<div class="col-lg-4" ng-repeat="site in sites">
 						<!-- site -->
 						<div class="site">
 							<div class="overlay" ng-click="open(site)">
