@@ -48,8 +48,6 @@
 		                    	<div class="row">
 	                    			<div class="col-md-5">
 	                    				<div class="modal-site">
-	                    					// need to fix this
-	                    					// <img class="loader" src="ajax-loader.gif" alt="loading"/>
 	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
 	                    				</div>
 	                    			</div>
