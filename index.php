@@ -7,6 +7,7 @@
 	    <title>Winthrop Medical Practice Websites</title>
 
 	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	    <link href="css/bootstrap.min.css"rel="stylesheet">
 	    <link href="css/style.css"rel="stylesheet">
 	</head>
@@ -25,9 +26,6 @@
 
 						<div class="site">
 							<img class="loader" src="ajax-loader.gif" alt="loading"/>
-							<div class="overlay" ng-click="open(site)">
-								<a href="#">View Website</a>
-							</div>
 							<div class="center-frame">
 								<div class="overlay" ng-click="open(site)">
 									<a href="#">View Website</a>
@@ -35,7 +33,7 @@
 								<iframe class="frame" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no" align="middle"></iframe>
 							</div>
 						</div>
-						<h5 class="text-center">{{ site.title }}</h5>
+						<h3 class="text-center">{{ site.title }}</h3>
 						<hr>
 
 		                <script type="text/ng-template" id="myModalContent.html">
@@ -50,8 +48,9 @@
 		                    	<div class="row">
 	                    			<div class="col-md-5">
 	                    				<div class="modal-site">
-	                    					<img class="loader" src="ajax-loader.gif" alt="loading"/>
-	                    					<iframe class="frame modal-frame resize-desktop" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
+	                    					// need to fix this
+	                    					// <img class="loader" src="ajax-loader.gif" alt="loading"/>
+	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
 	                    				</div>
 	                    			</div>
 	                    			<div class="col-md-7">
