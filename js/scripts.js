@@ -7,10 +7,14 @@ $('.tablet').on('click', function(){
 
 
 
-//Frame Loading 
+/*
+*
+*	This doesn't work as well as intended. Might want to rethink this.
+*
+*/
 
-$(document).ready(function () {
-    $('.frame, .modal-frame').on('load', function () {
-        $('.loader').hide();
-    });
-});
+// $(document).ready(function () {
+//     $('.frame, .modal-frame').on('load', function () {
+//         $('.loader').hide();
+//     });
+// });
