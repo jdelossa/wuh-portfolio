@@ -107,23 +107,25 @@ iframe {
 .modal-header {
     color: @white;
     background-color: @winthrop-blue;
-}
-.modal-footer {
-    border: none;
-    #border {
-        margin-top: 45px;
-        border-top: solid 1px @gray;
-    }
-    .btn-primary {
-        margin-top: 25px;
+
+    .close {
+        color: #ffffff;
+        opacity: 1;
+        font-weight: 100;
+        text-shadow: #545454 0 1px 0;
+        bottom: 60px;
+        position: relative;
+        font-size: 30px;
+        right: 10px;
     }
 }
 .modal-site {
     height: 350px;
     .modal-frame {
         pointer-events: all;
-        border: solid 5px @gray;
-        height: 1500px;
+        border: solid 2.5px @gray;
+        height: 1400px;
+        width: 1500px;
     }
     .resize-desktop {
         width: 1360px;
@@ -148,25 +150,25 @@ iframe {
         text-align: left;
     }
     .devices {
-        display: flex;
+        display: block;
         padding-top: 20px;
         padding-bottom: 50px;
         span {
-            margin-top: 10px;
             display: inline-block;
             text-align: center;
             width: 100%;
-            position: relative;
-            left: 5px;
+            margin: 10px 0;
         }
         .btn-device {
-            width: 33%;
+            text-align: center;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 10px;
             a {
-                padding: 20px 10px;
                 color: darken(@gray, 30%);
             }
             .fa {
-                font-size: 30px;
+                font-size: 38px;
 
                 &:hover {
                     color: darken(@gray, 20%);
@@ -174,7 +176,32 @@ iframe {
                 }
             }
         }
+        .border-bottom {
+            border-bottom: solid 1px @gray; 
+        }
+    }
+    .btn-visit {
+       text-align: center;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        a {
+            color: darken(@gray, 30%);
+        }
+        .fa {
+            font-size: 38px;
 
+            &:hover {
+                color: darken(@gray, 20%);
+                cursor: pointer;
+            }
+        }
+        span {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            margin: 10px 0;
+        }
     }
 }
 /* FROM LARGEST TO SMALLEST SCREEN SIZE */
@@ -193,9 +220,6 @@ iframe {
         -webkit-transform: scale(0.35);
         width: 1020px;
     }
-    .info {
-        margin-left: 30px;
-    } 
     .modal-site {
         height: 500px;
     }
@@ -209,5 +233,23 @@ iframe {
 @media(max-width: 1200px){
     .frame {
         width: 1285px;
+    }
+}
+@media(max-width: 991px){
+    .frame{
+        width: 991px;
+    }
+    .modal-site .modal-frame {
+        width: 1200px;
+    }
+}
+@media(min-width: 992px){
+    .modal-lg{
+        width: 725px;
+    }
+}
+@media(max-width: 767px){
+    .modal-site .modal-frame {
+        width: 1500px;
     }
 }

@@ -41,9 +41,9 @@ portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $
           description: 'Advanced Orthopaedic Specialists',
       },
       {
-          title: 'Anthony Cipiolla Medical Services', 
+          title: 'Anthony Cipolla Medical Services', 
           url: 'http://wuhwebsites.winthrop.org/cipolla_wordpress/',
-          description: 'Anthony Cipiolla Medical Services',
+          description: 'Anthony Cipolla Medical Services',
       },
       {
           title: 'East End Cardiology', 

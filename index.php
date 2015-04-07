@@ -41,37 +41,32 @@
 			                	<div class="row">
 			                    	<div class="col-xs-12">
 			                			<h2 class="text-center">{{ site.title }}</h2>
+			                			<span class="close" ng-click="close()"><i class="fa fa-times"></i></span>
 			                		</div>
 			                	</div>
 		                	</div>
 		                    <div class="modal-body">
 		                    	<div class="row">
-	                    			<div class="col-md-5">
+	                    			<div class="col-sm-9">
 	                    				<div class="modal-site">
-	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no"></iframe>
+	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}"></iframe>
 	                    				</div>
 	                    			</div>
-	                    			<div class="col-md-7">
+	                    			<div class="col-sm-3">
 	                    				<div class="info">
 	                    					<div class="devices">
-	                    						<div class="btn-device"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
-	                    						<div class="btn-device"><a class="tablet"><i class="fa fa-tablet"></i><span>Tablet</span></a></div>
+	                    						<div class="btn-device border-bottom"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
+	                    						<div class="btn-device border-bottom"><a class="tablet"><i class="fa fa-tablet"></i><span>Tablet</span></a></div>
 	                    						<div class="btn-device"><a class="mobile"><i class="fa fa-mobile"></i><span>Mobile</span></a></div>
 	                    					</div>
-	                    					<p class="description">{{ site.description }}</p>
-	                    					<button class="btn btn-success btn-site pull-left"><a ng-href="{{ site.url }}" target="_blank">Visit Website</a></button>
+	                    					<!--<p class="description">{{ site.description }}</p>-->
+	                    					<div class="btn-visit"><a ng-href="{{ site.url }}" target="_blank"><i class="fa fa-share"></i><span>Visit Site</span></a></div>
 	                    				<div>
 	                    			</div>
 	                    		</div>
 		                    </div>
-		                    <div class="modal-footer">
-		                    	<div class="row">
-		                    		<div id="border" class="col-xs-12">
-		                    			<button class="btn btn-primary" ng-click="close()">Close</button>
-		                    		</div>
-		                    	</div>
-		                    </div>
 		                </script>
+
 					</div>
 				</div>
 			</div>
@@ -79,10 +74,10 @@
 
   </body>
 
-  	<!-- JQUERY LATEST -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/angular-ui-bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
+
 </html>
