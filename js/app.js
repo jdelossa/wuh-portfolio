@@ -3,9 +3,21 @@ var portfolioApp = angular.module('portfolioApp', ['ui.bootstrap', 'filters-modu
 portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site) {
 	$scope.site = site;
 
-  $scope.device = function() {
-    alert('click');
-  } 
+  $scope.desktop = function() {
+    $('.modal-frame').addClass('modal-desktop');
+    $('.modal-frame').removeClass('modal-tablet');
+    $('.modal-frame').removeClass('modal-mobile');
+  }; 
+  $scope.tablet = function() {
+    $('.modal-frame').addClass('modal-tablet');
+     $('.modal-frame').removeClass('modal-desktop');
+    $('.modal-frame').removeClass('modal-mobile');
+  }; 
+  $scope.mobile = function() {
+    $('.modal-frame').addClass('modal-mobile');
+     $('.modal-frame').removeClass('modal-desktop');
+    $('.modal-frame').removeClass('modal-tablet');
+  }; 
 
 	$scope.close = function () {
     $modalInstance.dismiss('close');

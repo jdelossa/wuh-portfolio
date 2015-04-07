@@ -115,15 +115,15 @@ iframe {
   pointer-events: all;
   border: solid 2.5px #cccccc;
   height: 1400px;
+}
+.modal-site .modal-frame,
+.modal-site .modal-desktop {
   width: 1500px;
 }
-.modal-site .resize-desktop {
-  width: 1360px;
-}
-.modal-site .resize-tablet {
+.modal-site .modal-tablet {
   width: 800px;
 }
-.modal-site .resize-mobile {
+.modal-site .modal-mobile {
   width: 480px;
 }
 .info {
@@ -226,8 +226,15 @@ iframe {
   .frame {
     width: 991px;
   }
-  .modal-site .modal-frame {
+  .modal-site .modal-frame,
+  .modal-site .modal-desktop {
     width: 1200px;
+  }
+  .modal-site .modal-tablet {
+    width: 800px;
+  }
+  .modal-site .modal-mobile {
+    width: 480px;
   }
 }
 @media (min-width: 992px) {
@@ -236,7 +243,26 @@ iframe {
   }
 }
 @media (max-width: 767px) {
-  .modal-site .modal-frame {
+  .modal-site .modal-frame,
+  .modal-site .modal-desktop {
     width: 1500px;
+  }
+  .modal-site .modal-tablet {
+    width: 800px;
+  }
+  .modal-site .modal-mobile {
+    width: 480px;
+  }
+  .devices {
+    display: inline-block !important;
+    width: 100%;
+  }
+  .devices .btn-device {
+    display: inline-block;
+    width: 33% !important;
+  }
+  .devices .border-bottom {
+    border-bottom: none !important;
+    border-right: solid 1px #cccccc;
   }
 }

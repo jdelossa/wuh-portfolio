@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -8,8 +9,8 @@
 
 	    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-	    <link href="css/bootstrap.min.css"rel="stylesheet">
-	    <link href="css/style.css"rel="stylesheet">
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -47,22 +48,26 @@
 		                	</div>
 		                    <div class="modal-body">
 		                    	<div class="row">
-	                    			<div class="col-sm-9">
+
+		                    		<div class="col-sm-9">
 	                    				<div class="modal-site">
 	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}"></iframe>
 	                    				</div>
 	                    			</div>
+	                    			
 	                    			<div class="col-sm-3">
 	                    				<div class="info">
 	                    					<div class="devices">
-	                    						<div ng-click="device()" class="btn-device border-bottom"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
-	                    						<div ng-click="device()" class="btn-device border-bottom"><a class="tablet"><i class="fa fa-tablet"></i><span>Tablet</span></a></div>
-	                    						<div ng-click="device()" class="btn-device"><a class="mobile"><i class="fa fa-mobile"></i><span>Mobile</span></a></div>
+	                    						<div ng-click="desktop()" class="btn-device border-bottom"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
+	                    						<div ng-click="tablet()" class="btn-device border-bottom"><a class="tablet"><i class="fa fa-tablet"></i><span>Tablet</span></a></div>
+	                    						<div ng-click="mobile()" class="btn-device"><a class="mobile"><i class="fa fa-mobile"></i><span>Mobile</span></a></div>
 	                    					</div>
 	                    					<!--<p class="description">{{ site.description }}</p>-->
 	                    					<div class="btn-visit"><a ng-href="{{ site.url }}" target="_blank"><i class="fa fa-share"></i><span>Visit Site</span></a></div>
 	                    				<div>
 	                    			</div>
+
+	                   
 	                    		</div>
 		                    </div>
 		                </script>
@@ -72,11 +77,13 @@
 			</div>
 		</div>
 
-  </body>
-
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/angular-ui-bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+
+  </body>
+
+	
 
 </html>

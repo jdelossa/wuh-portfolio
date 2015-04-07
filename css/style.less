@@ -125,15 +125,14 @@ iframe {
         pointer-events: all;
         border: solid 2.5px @gray;
         height: 1400px;
+    }
+    .modal-frame, .modal-desktop {
         width: 1500px;
     }
-    .resize-desktop {
-        width: 1360px;
-    }
-    .resize-tablet {
+    .modal-tablet {
         width: 800px;
     }
-    .resize-mobile {
+    .modal-mobile {
         width: 480px;
     }
 }
@@ -239,8 +238,16 @@ iframe {
     .frame{
         width: 991px;
     }
-    .modal-site .modal-frame {
-        width: 1200px;
+    .modal-site {
+        .modal-frame, .modal-desktop {
+            width: 1200px;
+        }
+        .modal-tablet {
+            width: 800px;
+        }
+        .modal-mobile {
+            width: 480px;
+        }
     }
 }
 @media(min-width: 992px){
@@ -249,7 +256,27 @@ iframe {
     }
 }
 @media(max-width: 767px){
-    .modal-site .modal-frame {
-        width: 1500px;
+    .modal-site {
+        .modal-frame, .modal-desktop {
+            width: 1500px;
+        }
+        .modal-tablet {
+            width: 800px;
+        }
+        .modal-mobile {
+            width: 480px;
+        }
+    }
+    .devices {
+        display: inline-block !important;
+        width: 100%;
+        .btn-device {
+            display: inline-block;
+            width: 33% !important;
+        }
+        .border-bottom {
+            border-bottom: none !important;
+            border-right: solid 1px @gray; 
+        }
     }
 }
