@@ -258,7 +258,7 @@ iframe {
     width: 100%;
   }
   .devices .btn-device {
-    display: inline-block;
+    float: left;
     width: 33% !important;
   }
   .devices .border-bottom {
