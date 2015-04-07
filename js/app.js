@@ -1,14 +1,18 @@
 var portfolioApp = angular.module('portfolioApp', ['ui.bootstrap', 'filters-module']);
 
-portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site){
+portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site) {
 	$scope.site = site;
 
+  $scope.device = function() {
+    alert('click');
+  } 
+
 	$scope.close = function () {
-	    $modalInstance.dismiss('close');
+    $modalInstance.dismiss('close');
 	};
 });
 
-portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $log){
+portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $log) {
 	$scope.sites = [
       {
           title: 'Bethpage Primary Medical Care', 
@@ -59,16 +63,16 @@ portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $
 
     // MODAL WINDOW
     $scope.open = function(_site) {
-        var modalInstance = $modal.open({
-        	controller: 'modalCtrl',
-        	templateUrl: 'myModalContent.html',
-        	size: 'lg',
-            resolve: {
-                site: function(){
-                    return _site;
-                }
-            }
-        });
+      var modalInstance = $modal.open({
+      	controller: 'modalCtrl',
+      	templateUrl: 'myModalContent.html',
+      	size: 'lg',
+          resolve: {
+              site: function(){
+                return _site;
+              }
+          }
+      });
     };
 
 });

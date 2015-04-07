@@ -55,9 +55,9 @@
 	                    			<div class="col-sm-3">
 	                    				<div class="info">
 	                    					<div class="devices">
-	                    						<div class="btn-device border-bottom"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
-	                    						<div class="btn-device border-bottom"><a class="tablet"><i class="fa fa-tablet"></i><span>Tablet</span></a></div>
-	                    						<div class="btn-device"><a class="mobile"><i class="fa fa-mobile"></i><span>Mobile</span></a></div>
+	                    						<div ng-click="device()" class="btn-device border-bottom"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
+	                    						<div ng-click="device()" class="btn-device border-bottom"><a class="tablet"><i class="fa fa-tablet"></i><span>Tablet</span></a></div>
+	                    						<div ng-click="device()" class="btn-device"><a class="mobile"><i class="fa fa-mobile"></i><span>Mobile</span></a></div>
 	                    					</div>
 	                    					<!--<p class="description">{{ site.description }}</p>-->
 	                    					<div class="btn-visit"><a ng-href="{{ site.url }}" target="_blank"><i class="fa fa-share"></i><span>Visit Site</span></a></div>
@@ -78,6 +78,5 @@
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="js/angular-ui-bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
 
 </html>
