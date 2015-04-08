@@ -49,13 +49,13 @@
 		                    <div class="modal-body">
 		                    	<div class="row">
 
-		                    		<div class="col-sm-9">
+		                    		<div class="col-sm-9 push">
 	                    				<div class="modal-site">
 	                    					<iframe class="frame modal-frame" ng-src="{{ site.url | trustAsResourceUrl }}"></iframe>
 	                    				</div>
 	                    			</div>
 	                    			
-	                    			<div class="col-sm-3">
+	                    			<div class="col-sm-3 pull">
 	                    				<div class="info">
 	                    					<div class="devices">
 	                    						<div ng-click="desktop()" class="btn-device border-bottom"><a class="desktop"><i class="fa fa-desktop"></i><span>Desktop</span></a></div>
@@ -63,7 +63,7 @@
 	                    						<div ng-click="mobile()" class="btn-device"><a class="mobile"><i class="fa fa-mobile"></i><span>Mobile</span></a></div>
 	                    					</div>
 	                    					<!--<p class="description">{{ site.description }}</p>-->
-	                    					<div class="btn-visit"><a ng-href="{{ site.url }}" target="_blank"><i class="fa fa-share"></i><span>Visit Site</span></a></div>
+	                    					<div class="btn-visit border-left"><a ng-href="{{ site.url }}" target="_blank"><i class="fa fa-share"></i><span>Visit Site</span></a></div>
 	                    				<div>
 	                    			</div>
 

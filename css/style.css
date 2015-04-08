@@ -97,6 +97,7 @@ iframe {
 .modal-header {
   color: #ffffff;
   background-color: #336c83;
+  padding: 15px 15px 0 15px;
 }
 .modal-header .close {
   color: #ffffff;
@@ -106,7 +107,6 @@ iframe {
   bottom: 60px;
   position: relative;
   font-size: 30px;
-  right: 10px;
 }
 .modal-site {
   height: 350px;
@@ -243,6 +243,12 @@ iframe {
   }
 }
 @media (max-width: 767px) {
+  .navbar-static-top h1 {
+    font-size: 32px;
+  }
+  .frame {
+    width: 1280px;
+  }
   .modal-site .modal-frame,
   .modal-site .modal-desktop {
     width: 1500px;
@@ -259,10 +265,70 @@ iframe {
   }
   .devices .btn-device {
     float: left;
-    width: 33% !important;
+    width: 25% !important;
   }
   .devices .border-bottom {
     border-bottom: none !important;
     border-right: solid 1px #cccccc;
+  }
+  .btn-visit {
+    bottom: 160px;
+    float: right;
+    position: relative;
+    width: 25% !important;
+  }
+  .border-left {
+    border-left: solid 1px #cccccc;
+  }
+  .push {
+    margin-top: 150px;
+  }
+  .pull {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}
+@media (max-width: 580px) {
+  .modal-site .modal-frame,
+  .modal-site .modal-desktop {
+    width: 1200px;
+  }
+  .modal-site .modal-tablet {
+    width: 767px;
+  }
+  .modal-site .modal-mobile {
+    width: 480px;
+  }
+}
+@media (max-width: 550px) {
+  .modal-header h2,
+  .modal-header .close {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .frame {
+    width: 1050px;
+  }
+  .modal-site .modal-frame,
+  .modal-site .modal-desktop {
+    width: 991px;
+  }
+  .modal-site .modal-tablet {
+    width: 767px;
+  }
+  .modal-site .modal-mobile {
+    width: 480px;
+  }
+  .devices .btn-device .fa {
+    font-size: 28px !important;
+  }
+  .btn-visit {
+    bottom: 150px;
+  }
+  .btn-visit .fa {
+    font-size: 28px !important;
   }
 }
