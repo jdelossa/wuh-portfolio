@@ -26,8 +26,9 @@
 					<div class="col-lg-4 col-md-6 col-sm-6" data-ng-repeat="site in sites">
 
 						<div class="site">
-							<!-- <img class="loader" src="ajax-loader.gif" alt="loading"/> -->
+							<div class="loading" style="display:none;"><img src="ajax-loader.gif" alt="loading"/>Loading Y'all</div>
 							<div class="center-frame">
+
 								<div class="overlay" data-ng-click="open(site)">
 									<a href="#">View Website</a>
 								</div>

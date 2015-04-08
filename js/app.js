@@ -7,16 +7,29 @@ portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site) {
     $('.modal-frame').addClass('modal-desktop');
     $('.modal-frame').removeClass('modal-tablet');
     $('.modal-frame').removeClass('modal-mobile');
+    $('.modal-site').css({'width': '525px'});
+
+    // if ($('.frame').width() == 1200){
+    //   $('.modal-site').css({'width':'525px'});
+    // }
+    // else if ($('.frame').width() == 991){
+    //   $('.modal-site').css({'width':'346px'});
+    // }
+      
+ 
+
   }; 
   $scope.tablet = function() {
     $('.modal-frame').addClass('modal-tablet');
-     $('.modal-frame').removeClass('modal-desktop');
+    $('.modal-frame').removeClass('modal-desktop');
     $('.modal-frame').removeClass('modal-mobile');
+    $('.modal-site').css({'width':'280px'});
   }; 
   $scope.mobile = function() {
     $('.modal-frame').addClass('modal-mobile');
-     $('.modal-frame').removeClass('modal-desktop');
+    $('.modal-frame').removeClass('modal-desktop');
     $('.modal-frame').removeClass('modal-tablet');
+    $('.modal-site').css({'width':'168px'});
   }; 
 
 	$scope.close = function () {
@@ -85,6 +98,18 @@ portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $
               }
           }
       });
+    };
+
+    //Loading Gif
+    $scope.loading = function() {      
+      $('.loading')
+        .hide()
+        .ajaxStart(function(){
+          $(this).show();
+        })
+        .ajaxStop(function(){
+          $(this).hide();
+        })
     };
 
 });
