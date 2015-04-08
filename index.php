@@ -19,19 +19,19 @@
 			<h1 class="text-center">Winthrop Medical Practice Websites</h1>
 		</div>
 
-		<div ng-app="portfolioApp" ng-controller="portfolioAppCtrl" class="container">
+		<div data-ng-app="portfolioApp" data-ng-controller="portfolioAppCtrl" class="container">
 			<div class="sites">
 				<div class="row">
 
-					<div class="col-lg-4 col-md-6 col-sm-6" ng-repeat="site in sites">
+					<div class="col-lg-4 col-md-6 col-sm-6" data-ng-repeat="site in sites">
 
 						<div class="site">
 							<!-- <img class="loader" src="ajax-loader.gif" alt="loading"/> -->
 							<div class="center-frame">
-								<div class="overlay" ng-click="open(site)">
+								<div class="overlay" data-ng-click="open(site)">
 									<a href="#">View Website</a>
 								</div>
-								<iframe class="frame" ng-src="{{ site.url | trustAsResourceUrl }}" scrolling="no" align="middle"></iframe>
+								<iframe class="frame" data-ng-src="{{ site.url | trustAsResourceUrl }}"></iframe>
 							</div>
 						</div>
 						<h3 class="text-center">{{ site.title }}</h3>
