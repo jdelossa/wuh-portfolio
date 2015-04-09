@@ -96,12 +96,12 @@ h3 {
         }
     }
 }
-.loader {
-    background: @white;
+.loading {
+    background: url('../loader.gif') center no-repeat;
     position: absolute;
         left: 0px;
-        top: 120px;
-    z-index: 999;
+        right: 0px;
+    z-index: 9999;
 }
 .modal-header {
     color: @white;
@@ -230,11 +230,6 @@ h3 {
         -moz-transform: scale(0.35);
         -o-transform: scale(0.35);
         -webkit-transform: scale(0.35);
-    }
-}
-@media(max-width: 1080px){
-    .frame {
-        width: 1180px;
     }
 }
 @media(max-width: 991px){

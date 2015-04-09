@@ -20,13 +20,14 @@
 		</div>
 
 		<div data-ng-app="portfolioApp" data-ng-controller="portfolioAppCtrl" class="container">
+			
 			<div class="sites">
 				<div class="row">
 
 					<div class="col-lg-4 col-md-6 col-sm-6" data-ng-repeat="site in sites">
 
 						<div class="site">
-							<div class="loading" style="display:none;"><img src="ajax-loader.gif" alt="loading"/>Loading Y'all</div>
+							
 							<div class="center-frame">
 
 								<div class="overlay" data-ng-click="open(site)">
