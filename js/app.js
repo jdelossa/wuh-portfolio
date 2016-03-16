@@ -2,53 +2,182 @@ var portfolioApp = angular.module('portfolioApp', ['ui.bootstrap', 'filters-modu
 
 // Portfolio Controller
 portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $log) {
-  // Sites
+
+    // Sites
 	$scope.sites = [
+      {
+          title: 'Shoreham Medical Services',
+          url: 'http://www.shorehammedicalservicespc.com/',
+          image: 'images/shoreham.png',
+          status: 'Deployed',
+          reason: 'Since 2014',
+          domain: 'shorehammedicalservicespc.com',
+          reviewed: 'Yes',
+          live: 'Yes',
+          wordpress: 'No',
+          privacy: 'No'
+      },
       {
           title: 'Bethpage Primary Medical Care', 
           url: 'http://wuhwebsites.winthrop.org/bethpage_wordpress/',
-          description: 'Bethpage Primary Medical Care',
+          image: 'images/bethpage.png',
+          status: 'Pending',
+          reason: 'Awaiting new physician headshots',
+          domain: 'bethpageprimarymedicalcare.com',
+          reviewed: 'Yes',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes',
+          explain: 'Practice Manager Dorann Majewski wants new headshots for her physicians.'
       },
       {
-          title: 'Garden City Primary Medical Care', 
-          url: 'http://wuhwebsites.winthrop.org/garden_city_primary_wordpress/',
-          description: 'Garden City Primary Medical Care',
+          title: 'Garden City Primary Medical Care',
+          url: 'http://wuhwebsites.winthrop.org/gardencityprimary/',
+          image: 'images/garden-city-primary.png',
+          status: 'Pending',
+          reason: 'Being reviewed by Marketing',
+          domain: 'gardencityprimarymedicalcare.com',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
       },
       {
-          title: 'Shore Heart Associates', 
+          title: 'Shore Heart Associates',
           url: 'http://wuhwebsites.winthrop.org/shoreheart_wordpress/',
-          description: 'Shore Heart Associates',
+          image: 'images/shore-heart.png',
+          status: 'Pending',
+          reason: 'Awaiting physician headshots',
+          domain: '',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'No',
+          explain: 'Physicians have not taken their headshots and will not go to DejaVu Studio.'
       },
       {
-          title: 'South Shore Cardiovascular Medical', 
+          title: 'South Shore Cardiovascular Medical',
           url: 'http://wuhwebsites.winthrop.org/southshorecardiovascular_wordpress/',
-          description: 'South Shore Cardiovascular Medical',
+          image: 'images/south-shore.png',
+          status: 'Complete',
+          reason: 'Ready for deployment',
+          domain: 'southshorecardiovascular.com',
+          reviewed: 'Yes',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
+
       },
       {
-          title: 'Advanced Neurological Associates', 
+          title: 'Advanced Neurological Associates',
           url: 'http://wuhwebsites.winthrop.org/advanced_neuro_wordpress/',
-          description: 'Advanced Neurological Associates',
+          image: 'images/advanced-neuro.png',
+          status: 'Pending',
+          reason: 'Awaiting physician headshots',
+          domain: 'advancedneurologicalservices.com',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes',
+          explain: 'Physicians have not taken their headshots and will not go to DejaVu Studio.'
       },
       {
-          title: 'Advanced Orthopaedic Specialists', 
+          title: 'Advanced Orthopaedic Specialists',
           url: 'http://wuhwebsites.winthrop.org/advanced_ortho_wordpress/',
-          description: 'Advanced Orthopaedic Specialists',
+          image: 'images/advanced-ortho.png',
+          status: 'Pending',
+          reason: 'Prompt to be reviewed by Marketing',
+          domain: 'advancedorthospecialists.com',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
       },
       {
-          title: 'Anthony Cipolla Medical Services', 
+          title: 'Anthony Cipolla Medical Services',
           url: 'http://wuhwebsites.winthrop.org/cipolla_wordpress/',
-          description: 'Anthony Cipolla Medical Services',
+          image: 'images/cipolla.png',
+          status: 'Pending',
+          reason: 'Prompt to be reviewed by Marketing',
+          domain: '',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
       },
       {
-          title: 'East End Cardiology', 
-          url: 'http://wuhwebsites.winthrop.org/eastend_cardio_wordpress/',
-          description: 'East End Cardiology',
-      },
-       {
-          title: 'Peter Kelt Medical Services', 
+          title: 'Peter Kelt Medical Services',
           url: 'http://wuhwebsites.winthrop.org/kelt_wordpress',
-          description: 'Peter Kelt Medical Services',
-      }
+          image: 'images/kelt.png',
+          status: 'Complete',
+          reason: 'Ready for deployment',
+          domain: '',
+          reviewed: 'Yes',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
+      },
+      {
+          title: 'Greenport Primary Medical Care',
+          url: 'http://wuhwebsites.winthrop.org/kaplan_wordpress',
+          image: 'images/greenport.png',
+          status: 'Complete',
+          reason: 'Ready for deployment',
+          domain: '',
+          reviewed: 'Yes',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
+      },
+      {
+          title: 'Vincent Anzalone Medical Services',
+          url: 'http://wuhwebsites.winthrop.org/anzalone_wordpress',
+          image: 'images/anzalone.png',
+          status: 'Pending',
+          reason: 'Awaiting physician headshots',
+          domain: 'drvincentanzalone.com',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'No',
+          explain: 'Physicians have not taken their headshots and will not go to DejaVu Studio.'
+      },
+      {
+          title: 'Pisciotto Medical Services',
+          url: 'http://wuhwebsites.winthrop.org/pisciotto_wordpress',
+          image: 'images/pisciotto.png',
+          status: 'Pending',
+          reason: 'Being reviewed by Marketing',
+          domain: 'southshorecardiovascular.com',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'Yes'
+      },
+      {
+          title: 'Gastrointestinal Associates of Long Island',
+          url: 'http://giali.net',
+          image: 'images/giali.png',
+          status: 'Deployed',
+          reason: 'Since 2015',
+          domain: 'giali.net',
+          reviewed: 'Yes',
+          live: 'Yes',
+          wordpress: 'No',
+          privacy: 'Yes'
+      },
+      {
+          title: 'East End Cardiology',
+          url: 'http://wuhwebsites.winthrop.org/eastend_cardio_wordpress/',
+          image: 'images/east-end-cardio.png',
+          status: 'Discarded',
+          reason: 'Practice already has a website',
+          domain: '',
+          reviewed: 'No',
+          live: 'No',
+          wordpress: 'Yes',
+          privacy: 'No'
+       }
     ];
 
   // Modal Window
@@ -69,6 +198,7 @@ portfolioApp.controller('portfolioAppCtrl', function($scope, $timeout, $modal, $
 
 // Modal Controller
 portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site) {
+
   $scope.site = site;
 
   $scope.desktop = function() {
@@ -78,8 +208,10 @@ portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site) {
 
     if ($(window).width() > 580 ){
       $('.modal-site').css({'width':'525px'});
-    } else if ($(window).width() < 580 ){
+    } else if ($(window).width() <= 580 && $(window).width() > 400 ){
       $('.modal-site').css({'width': '346px'});
+    } else if ($(window).width() <= 400 ){
+      $('.modal-site').css({'width': '270px'});
     }
 
   }; 
@@ -87,13 +219,25 @@ portfolioApp.controller('modalCtrl', function($scope, $modalInstance, site) {
     $('.modal-frame').addClass('modal-tablet');
     $('.modal-frame').removeClass('modal-desktop');
     $('.modal-frame').removeClass('modal-mobile');
-    $('.modal-site').css({'width':'280px'});
+
+    if ($(window).width() > 400 ){
+      $('.modal-site').css({'width':'280px'});
+    } else if ($(window).width() <= 400 ){
+      $('.modal-site').css({'width': '215px'});
+    }
+
   }; 
   $scope.mobile = function() {
     $('.modal-frame').addClass('modal-mobile');
     $('.modal-frame').removeClass('modal-desktop');
     $('.modal-frame').removeClass('modal-tablet');
     $('.modal-site').css({'width':'168px'});
+
+    if ($(window).width() > 400 ){
+      $('.modal-site').css({'width':'168px'});
+    } else if ($(window).width() <= 400 ){
+      $('.modal-site').css({'width': '130px'});
+    }
   }; 
 
   $scope.close = function () {
@@ -107,4 +251,4 @@ angular.module('filters-module', [])
     return function(val) {
         return $sce.trustAsResourceUrl(val);
     };
-}])
+}]);
